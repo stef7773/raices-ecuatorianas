@@ -20,11 +20,11 @@
   :root{
     --bg-0:#171009;
     --bg-1:#211709;
-    --gold:#D6A24A;
-    --gold-soft:#EFC783;
+    --gold:#E8622C;
+    --gold-soft:#FF9662;
     --ink:#FBF3E6;
     --ink-dim:#C9B79E;
-    --border:rgba(214,162,74,0.22);
+    --border:rgba(232,98,44,0.22);
     --costa:#2FB6C6;
     --sierra:#D96B3A;
     --amazonia:#4FA65C;
@@ -68,7 +68,7 @@
     background:var(--gold); color:#221604; padding:12px 24px; border-radius:100px;
     transition:transform .2s, box-shadow .2s;
   }
-  .nav-cta:hover{transform:translateY(-2px); box-shadow:0 10px 26px rgba(214,162,74,0.35);}
+  .nav-cta:hover{transform:translateY(-2px); box-shadow:0 10px 26px rgba(232,98,44,0.35);}
 
   /* ---------- HERO ---------- */
   .hero{ position:relative; min-height:100vh; display:flex; align-items:center; padding-top:82px; overflow:hidden; }
@@ -81,7 +81,7 @@
   .hero .wrap{position:relative; z-index:2; padding:60px 28px;}
   .hero-eyebrow{
     display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:700;
-    background:rgba(214,162,74,0.14); border:1px solid var(--border); color:var(--gold-soft);
+    background:rgba(232,98,44,0.14); border:1px solid var(--border); color:var(--gold-soft);
     padding:8px 18px; border-radius:100px; margin-bottom:28px;
   }
   h1.hero-title{ font-size:clamp(2.3rem,5.4vw,4rem); line-height:1.08; max-width:780px; margin-bottom:22px; }
@@ -93,12 +93,12 @@
     padding:16px 32px; border-radius:100px; display:inline-flex; align-items:center; gap:8px;
     transition:transform .2s, box-shadow .2s;
   }
-  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 32px rgba(214,162,74,0.32);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 32px rgba(232,98,44,0.32);}
   .btn-outline{
     font-weight:700; font-size:0.96rem; border:1px solid var(--border); color:var(--ink);
     padding:16px 30px; border-radius:100px; transition:border-color .2s, background .2s;
   }
-  .btn-outline:hover{border-color:var(--gold); background:rgba(214,162,74,0.08);}
+  .btn-outline:hover{border-color:var(--gold); background:rgba(232,98,44,0.08);}
   .hero-pills{display:flex; gap:14px; flex-wrap:wrap;}
   .hero-pill{
     display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.05);
@@ -183,7 +183,7 @@
     background:var(--bg-1); border:1px solid var(--border); border-radius:24px; padding:36px 32px;
     display:flex; flex-direction:column; gap:18px; position:relative;
   }
-  .plan-card.featured{ border-color:var(--gold); box-shadow:0 24px 60px rgba(214,162,74,0.14); }
+  .plan-card.featured{ border-color:var(--gold); box-shadow:0 24px 60px rgba(232,98,44,0.14); }
   .plan-badge{
     position:absolute; top:-14px; right:28px; background:var(--gold); color:#221604;
     font-size:0.76rem; font-weight:700; padding:6px 16px; border-radius:100px;
@@ -200,6 +200,11 @@
   }
   .plan-cta:hover{transform:translateY(-2px);}
   .plans-note{text-align:center; color:var(--ink-dim); font-size:0.92rem; margin-top:32px;}
+  .plans-subhead{
+    text-align:center; font-family:'Baloo 2',sans-serif; font-size:1.2rem; font-weight:700;
+    color:var(--gold-soft); margin-bottom:24px;
+  }
+  .plans-subhead-2{ margin-top:56px; }
 
   /* ---------- MENU POR REGIÓN ---------- */
   .menu-tabs{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:44px;}
@@ -314,9 +319,9 @@
     <div class="wrap"><div class="scene-content">
       <span class="scene-region">🐢 Insular · Galápagos</span>
       <h2>Un plato especial, de otro mundo</h2>
-      <p class="desc">La especialidad de temporada: pescado a la plancha con langosta, la joya de nuestra carta inspirada en las islas.</p>
+      <p class="desc">Mariscos frescos sobre arroz, con la misma alma marinera de la costa, pero con el paisaje volcánico de las islas de fondo.</p>
       <div class="scene-dishes">
-        <div class="dish-chip"><span>🦞 Pescado con Langosta — especialidad de temporada</span></div>
+        <div class="dish-chip"><img src="assets/images/arroz-marinero.jpg" alt="Arroz marinero de las islas"><span>Arroz Marinero de las Islas</span></div>
       </div>
     </div></div>
   </div>
@@ -365,34 +370,63 @@
     <div class="section-head">
       <p class="eyebrow">Tu semana, resuelta</p>
       <h2>Planes semanales y quincenales</h2>
-      <p>Pagás una vez y te olvidás de qué vas a almorzar.</p>
+      <p>Elegí si querés el mismo plato todos los días (más simple, más barato) o un plato distinto cada día, rotando las 4 regiones.</p>
     </div>
+
+    <p class="plans-subhead">📦 Plan Semanal — 7 almuerzos</p>
     <div class="plans-grid">
       <div class="plan-card">
-        <h3>Plan Semanal</h3>
+        <h3>Mismo Plato</h3>
+        <div class="plan-price">$28<small>/semana</small></div>
+        <div class="plan-per">$4.00 por almuerzo</div>
+        <ul>
+          <li>7 almuerzos del mismo plato</li>
+          <li>Elegís la región (Costa, Sierra, Amazonía o Insular)</li>
+          <li>La opción más económica</li>
+        </ul>
+        <a class="plan-cta" href="https://wa.me/593982630024?text=Hola%2C%20quiero%20el%20plan%20semanal%20de%207%20almuerzos%20del%20mismo%20plato" target="_blank" rel="noopener">Elegir este plan</a>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Recomendado</div>
+        <h3>Variado</h3>
         <div class="plan-price">$32<small>/semana</small></div>
         <div class="plan-per">$4.57 por almuerzo</div>
         <ul>
-          <li>7 almuerzos completos</li>
+          <li>7 almuerzos, un plato distinto cada día</li>
           <li>Rotación por las 4 regiones</li>
-          <li>Entrega semanal a domicilio</li>
+          <li>Para no repetir sabor en toda la semana</li>
         </ul>
-        <a class="plan-cta" href="https://wa.me/593982630024?text=Hola%2C%20quiero%20el%20plan%20semanal%20de%207%20almuerzos" target="_blank" rel="noopener">Elegir plan semanal</a>
+        <a class="plan-cta" href="https://wa.me/593982630024?text=Hola%2C%20quiero%20el%20plan%20semanal%20variado%20de%207%20almuerzos" target="_blank" rel="noopener">Elegir este plan</a>
+      </div>
+    </div>
+
+    <p class="plans-subhead plans-subhead-2">📦 Plan Quincenal — 14 almuerzos</p>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <h3>Mismo Plato</h3>
+        <div class="plan-price">$52<small>/quincena</small></div>
+        <div class="plan-per">$3.71 por almuerzo</div>
+        <ul>
+          <li>14 almuerzos del mismo plato</li>
+          <li>Elegís la región</li>
+          <li>El precio por almuerzo más bajo de todos</li>
+        </ul>
+        <a class="plan-cta" href="https://wa.me/593982630024?text=Hola%2C%20quiero%20el%20plan%20quincenal%20de%2014%20almuerzos%20del%20mismo%20plato" target="_blank" rel="noopener">Elegir este plan</a>
       </div>
       <div class="plan-card featured">
-        <div class="plan-badge">Más conveniente</div>
-        <h3>Plan Quincenal</h3>
+        <div class="plan-badge">Más variedad</div>
+        <h3>Variado</h3>
         <div class="plan-price">$58<small>/quincena</small></div>
         <div class="plan-per">$4.14 por almuerzo</div>
         <ul>
-          <li>14 almuerzos completos</li>
+          <li>14 almuerzos, sabores distintos</li>
           <li>Rotación por las 4 regiones, dos semanas</li>
           <li>Una sola entrega, menos logística</li>
-          <li>Precio por almuerzo más bajo</li>
         </ul>
-        <a class="plan-cta" href="https://wa.me/593982630024?text=Hola%2C%20quiero%20el%20plan%20quincenal%20de%2014%20almuerzos" target="_blank" rel="noopener">Elegir plan quincenal</a>
+        <a class="plan-cta" href="https://wa.me/593982630024?text=Hola%2C%20quiero%20el%20plan%20quincenal%20variado%20de%2014%20almuerzos" target="_blank" rel="noopener">Elegir este plan</a>
       </div>
     </div>
+
     <p class="plans-note">Precios de referencia para Quito — pueden variar según zona de entrega. Consultá por WhatsApp por el Kit Desayuno como complemento.</p>
   </div>
 </section>
@@ -424,7 +458,7 @@
       <div class="menu-dish"><img src="assets/images/sancocho-amazonico.jpg" alt="Sancocho amazónico"><div class="menu-dish-info"><h4>Sancocho Amazónico</h4><p>Yuca, choclo y camarón de río en caldo.</p></div></div>
     </div>
     <div class="menu-panel" data-panel="insular">
-      <div class="menu-dish"><img src="assets/images/ceviche-pescado.jpg" alt="Pescado con langosta"><div class="menu-dish-info"><h4>Pescado con Langosta</h4><p>Especialidad de temporada, sujeta a disponibilidad.</p></div></div>
+      <div class="menu-dish"><img src="assets/images/arroz-marinero.jpg" alt="Arroz marinero de las islas"><div class="menu-dish-info"><h4>Arroz Marinero de las Islas</h4><p>Nuestra versión insular del clásico marinero.</p></div></div>
     </div>
   </div>
 </section>
